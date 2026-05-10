@@ -71,7 +71,7 @@ async function loadProfile() {
   `)
   .eq('wallet', address?.toLowerCase())
   .single()
-  console.log('PROFILE DATA:', latestProfile)
+  console.log('PROFILE DATA:', data)
   console.log('ADDRESS:', address?.toLowerCase())
 
 setProfile(data)
