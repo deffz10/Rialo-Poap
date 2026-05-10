@@ -7,7 +7,7 @@ export default function FaucetPage() {
   useEffect(() => {
     const timer = setTimeout(() => {
       window.location.href =
-        "https://cloud.google.com/application/web3/faucet/ethereum/sepolia"
+        "https://www.alchemy.com/faucets/base-sepolia"
     }, 1200)
 
     return () => clearTimeout(timer)
