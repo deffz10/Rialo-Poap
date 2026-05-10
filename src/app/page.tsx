@@ -55,7 +55,7 @@ export default function Home() {
 
     setTimeout(() => {
       window.location.reload()
-    }, 1000)
+    }, 5000)
   }
 }, [])
 
