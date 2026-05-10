@@ -43,6 +43,21 @@ function formatTime(time: string) {
 
 export default function Home() {
   const [events, setEvents] = useState<any[]>([])
+  useEffect(() => {
+  const alreadyRefreshed =
+    sessionStorage.getItem('home_refreshed')
+
+  if (!alreadyRefreshed) {
+    sessionStorage.setItem(
+      'home_refreshed',
+      'true'
+    )
+
+    setTimeout(() => {
+      window.location.reload()
+    }, 1000)
+  }
+}, [])
 
   const loadEvents = async () => {
     const { data, error } = await supabase
